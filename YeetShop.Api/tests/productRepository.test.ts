@@ -1,8 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.116.0/testing/asserts.ts";
 import { Product } from '../lib/classes/product.ts';
-import { Repository } from '../lib/repositories/repository.ts';
+import { ProductRepository } from '../lib/repositories/productRepository.ts';
 
-const repository = new Repository();
+const repository = new ProductRepository();
 
 function setup() {
     // Create initial product and add it to repository

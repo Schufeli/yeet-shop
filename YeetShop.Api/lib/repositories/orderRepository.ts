@@ -1,7 +1,7 @@
-import { Product } from '../classes/product.ts';
+import { Order } from '../classes/order.ts';
 
-export class Repository {
-    private _collection: Product[] = [];
+export class OrderRepository {
+    private _collection: Order[] = [];
 
     /**
      * Get all elements
@@ -20,11 +20,11 @@ export class Repository {
     }
 
     /**
-     * Adds a new Product to the collection
-     * @param Product Product object
+     * Adds a new element to the collection
+     * @param Element Type object
      */
-    public add(Product: Product) {
-        Product.id;
-        this._collection.push(Product);
+    public add(element: Order) {
+        element.id;
+        this._collection.push(element);
     }
 }
