@@ -7,8 +7,11 @@
                 <img alt="ecommerce" class="object-cover object-center w-full h-full block" :src="element.image">
                 </a>
                 <div class="mt-4">
-                <h2 class="text-gray-900 title-font text-lg font-medium">{{ element.name }}</h2>
-                <p class="mt-1">CHF {{ element.price }}</p>
+                    <h2 class="text-gray-900 title-font text-lg font-medium">{{ element.name }}</h2>
+                    <div class="mt-1 flex">
+                        <p class="mr-3"></p>
+                        <p class="text-red-500 line-through decoration-2"></p>
+                    </div>
                 </div>
             </div>
             </div>
