@@ -1,11 +1,13 @@
 <template>
-<h1 class="text-3xl font-bold underline">    Hello world!  </h1>
+  <products></products>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import products from '~/components/products.vue'
 
 export default Vue.extend({
+  components: { products },
   name: 'IndexPage'
 })
 </script>
