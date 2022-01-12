@@ -1,9 +1,9 @@
-import { Product } from './product.ts';
+import { OrderedProduct } from './orderedProduct.ts';
 export interface Order {
     id: string,
     name: string,
     surname: string,
     email: string,
-    products: Product[],
+    products: OrderedProduct[],
     totalPrice: number
 }

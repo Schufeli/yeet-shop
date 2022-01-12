@@ -1,4 +1,4 @@
-import { Product } from '../classes/product.ts';
+import { OrderedProduct } from '../classes/orderedProduct.ts';
 import { Order } from '../classes/order.ts';
 import { OrderRepository } from '../repositories/orderRepository.ts';
 
