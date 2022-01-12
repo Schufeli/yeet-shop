@@ -1,1 +1,13 @@
-<p>{{ product.name }}</p>
+<div class="shadow rounded hover:shadow-lg">
+    <a class="block relative h-48 rounded overflow-hidden">
+        <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="product.image">
+    </a>
+    <div class="mt-4 px-4">
+        <h2 class="text-gray-900 title-font text-lg font-medium">{{ product.name }}</h2>
+        <p class="text-lg mt-1">{{ product.price }}</p>
+        <div class="mt-1 flex">
+            <p class="text-lg mr-1">{{ product.reducedPrice }}</p>
+            <p class="text-lg text-red-500 line-through decoration-2">{{ product.price }}</p>
+        </div>
+    </div>
+</div>
