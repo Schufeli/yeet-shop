@@ -1,13 +1,13 @@
-<div class="shadow rounded hover:shadow-lg">
+<div class="shadow rounded hover:shadow-lg h-full" (click)="openProductDetailDialog()">
     <a class="block relative h-48 rounded overflow-hidden">
         <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="product.image">
     </a>
     <div class="mt-4 px-4">
         <h2 class="text-gray-900 title-font text-lg font-medium">{{ product.name }}</h2>
-        <p class="text-lg mt-1">{{ product.price }}</p>
-        <div class="mt-1 flex">
-            <p class="text-lg mr-1">{{ product.reducedPrice }}</p>
-            <p class="text-lg text-red-500 line-through decoration-2">{{ product.price }}</p>
+        <p class="text-lg mt-1" *ngIf="product.reducedPrice <= 0">{{ product.price | currency: 'CHF' }}</p>
+        <div class="mt-1 flex" *ngIf="product.reducedPrice > 0">
+            <p class="text-lg mr-3">{{ product.reducedPrice | currency: 'CHF' }}</p>
+            <p class="text-lg text-red-500 line-through decoration-2">{{ product.price | currency: 'CHF' }}</p>
         </div>
     </div>
 </div>
