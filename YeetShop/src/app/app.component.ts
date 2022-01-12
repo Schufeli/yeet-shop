@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'YeetShop';
+
+  constructor(
+    private router: Router,
+  ) {}
+
+  navLinks = [
+    {
+      path: 'products',
+      icon: 'store'
+    },
+    {
+      path: 'cart',
+      icon: 'shopping_cart'
+    },
+    {
+      path: 'orders',
+      icon: 'view_list'
+    }
+  ];
 }
