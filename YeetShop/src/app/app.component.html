@@ -3,7 +3,7 @@
   <span class="example-spacer"></span>
   <div class="flex items-center">
     <mat-icon>shopping_cart</mat-icon>
-    <p style="margin: 0" class="mx-1 text-base">CHF 0.0</p>
+    <p style="margin: 0" class="mx-1 text-base">{{ totalPrice | currency: 'CHF'}}</p>
   </div>
 </mat-toolbar>
 
