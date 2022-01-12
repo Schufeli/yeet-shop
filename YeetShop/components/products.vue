@@ -8,11 +8,16 @@
                 </a>
                 <div class="mt-4">
                     <h2 class="text-gray-900 title-font text-lg font-medium">{{ element.name }}</h2>
-                    <p class="mt-1" v-if="element.reducedPrice <= 0">CHF {{ element.price.toFixed(2) }}</p>
+                    <p class="mt-1" v-if="element.reducedPrice <= 0">{{ element.price | price }}</p>
                     <div class="mt-1 flex" v-if="element.reducedPrice > 0">
-                        <p class="mr-3">CHF {{ element.reducedPrice.toFixed(2) }}</p>
-                        <p class="text-red-500 line-through decoration-2">CHF {{ element.price.toFixed(2) }}</p>
+                        <p class="mr-3">{{ element.reducedPrice | price }}</p>
+                        <p class="text-red-500 line-through decoration-2">{{ element.price | price }}</p>
                     </div>
+                    <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             </div>
@@ -31,6 +36,9 @@ export default {
 
             ]
         }
+    },
+    filters: {
+        price: number => `CHF ${number.toFixed(2)}`
     }
 }
 </script>
