@@ -17,4 +17,8 @@ export class ProductDetailDialogComponent {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  close(product: Product): void {
+    this.dialogRef.close(product);
+  }
 }
